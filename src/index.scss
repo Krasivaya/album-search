@@ -1,0 +1,73 @@
+.album-search {
+  .search-bar {
+    background: transparent !important;
+  }
+  form {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    max-height: 40px !important;
+    .field {
+      .input input {
+        backdrop-filter: blur(5rem);
+        border: solid 3px #4b57c04d !important;
+        height: 40px !important;
+      }
+      width: 50% !important;
+      margin-right: 2% !important;
+    }
+    button {
+      background: #4b57c0de !important;
+      color: #fff !important;
+    }
+  }
+}
+.album-list {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    &__item {
+      flex: 0 12%;
+      margin: 15px;
+      img.image {
+        max-width: 150px;
+        max-height: 150px;
+        border-radius: 20px;
+      }
+      h5 {
+        align-items: center;
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .album-search {
+    margin: 0 2%;
+    form {
+      display: flex;
+      flex-direction: column !important;
+
+      .field {
+        width: 100% !important;
+        margin-top: 25% !important;
+      }
+      button {
+        min-height: auto !important;
+      }
+    }
+  }
+  .album-list {
+    margin-top: 25%;
+    @media screen and (max-width: 320px) {
+      img.image {
+        max-width: 120px;
+        max-height: 120px;
+      }
+    }
+  }
+}
